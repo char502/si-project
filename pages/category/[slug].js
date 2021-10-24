@@ -22,10 +22,6 @@ const Category = ({ newsItems, category }) => {
 export const getServerSideProps = async ({ params }) => {
   const category = params.slug;
 
-  const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${process.env.NEXT_PUBLIC_REACT_APP_API_KEY}`;
-
-  console.log(url);
-
   const newsItems = await fetch(
     `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${process.env.NEXT_PUBLIC_REACT_APP_API_KEY}`
   ).then(response => response.json());
