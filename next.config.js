@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
+
+require('dotenv').config();
+
 module.exports = {
   reactStrictMode: true,
   env: {
-    react_app_api_key: 'e536074ef7c645008d563c828c8d4354',
+    react_app_api_key: process.env.react_app_api_key,
   },
 };
