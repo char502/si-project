@@ -14,6 +14,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/NewsItem.js", "pages/FrontPage.tsx", "pages/category/[slug].js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/NewsCard.js", "pages/FrontPage.js", "pages/category/[slug].js", "pages/index.js"],
   "exclude": ["node_modules"]
 }

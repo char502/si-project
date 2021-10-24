@@ -1,58 +1,51 @@
-
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 // import React from 'react';
 
-const Category = ({newsItems, category}) => {
-
+const Category = ({ newsItems, category }) => {
   const router = useRouter();
 
-  console.log('router: ', router.query)
+  console.log('router: ', router.query);
   // const { slug, ...rest } = router.query
-
 
   return (
     <div>
       <h2>Category page {category}</h2>
       <ul>
         {newsItems.articles.map(news => {
-          return (
-            <li key={news.url}>
-              {news.title}
-              
-            </li>
-          )
+          return <li key={news.url}>{news.title}</li>;
         })}
       </ul>
     </div>
-    
-
-  ) 
+  );
 };
 
-
 export const getServerSideProps = async ({ params }) => {
+  // console.log(params.slug);
 
-  console.log(params.slug)
+  const category = params.slug;
 
-  const category = params.slug
+  // console.log(category);
 
+  const newsItems = await fetch(
+    `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=e536074ef7c645008d563c828c8d4354`
+  ).then(response => response.json());
 
+  console.log(newsItems);
 
-  const newsItems = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=e536074ef7c645008d563c828c8d4354`).then(r => r.json())
-
-
-  console.log(newsItems)
-
+  if (!category) {
+    return {
+      notFound: true,
+    };
+  }
   // const category = categories.find(x => x.slug === slug);
 
   return {
     props: {
       newsItems,
-      category
+      category,
     },
   };
 };
-
 
 // export const getStaticPaths = async () => {
 //   const categories = (await import('../../src/newsSources')).default;
@@ -79,10 +72,7 @@ export const getServerSideProps = async ({ params }) => {
 
 //   const category = params.slug
 
-
-
 //   const newsItems = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=e536074ef7c645008d563c828c8d4354`).then(r => r.json())
-
 
 //   console.log(newsItems)
 
@@ -94,8 +84,6 @@ export const getServerSideProps = async ({ params }) => {
 //     },
 //   };
 // };
-
-
 
 // export const getServerSideProps = async ({ params, res }) => {
 //   const { category } = params;
