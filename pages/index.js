@@ -1,15 +1,11 @@
 // import type { NextPage } from 'next'
 // import Head from 'next/head'
 // import Image from 'next/image'
+// import { NextPage } from 'next';
 import styled from 'styled-components';
-import { NextPage } from 'next';
 import FrontPage from './FrontPage';
 
-const container = styled.div``;
-
 const IndexPage = ({ breakingNewsResult, allNewsSourcesResult }) => {
-  console.log(process.env.NEXT_PUBLIC_REACT_APP_API_KEY);
-
   return (
     <div>
       <FrontPage breakingNewsResult={breakingNewsResult} />

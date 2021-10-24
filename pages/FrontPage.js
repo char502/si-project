@@ -43,7 +43,7 @@ const FrontPage = ({ breakingNewsResult }) => {
         </div>
         <hr />
         <div>
-          <h1>Breaking News</h1>
+          {/* <h1>Breaking News</h1> */}
 
           {/* <p>{breakingNewsResult.articles[0].title}</p>
         <p>{breakingNewsResult.articles[0].description}</p>

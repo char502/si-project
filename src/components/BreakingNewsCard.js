@@ -2,11 +2,14 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const BreakingNewsCardContainer = styled.div`
-  background-color: pink;
+  /* background-color: pink; */
 `;
 
 const Title = styled.div`
-  background-color: lightblue;
+  /* background-color: lightyellow; */
+  margin: 15px 0;
+  font-family: Poppins;
+  font-weight: 700;
 `;
 
 const NewsImage = styled.img`
