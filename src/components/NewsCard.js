@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 
-const NewsItem = props => {
+const NewsCard = props => {
   //   const [newsSources, setNewsSources] = useState([]);
 
   return (
@@ -10,4 +11,4 @@ const NewsItem = props => {
   );
 };
 
-export default NewsItem;
+export default NewsCard;

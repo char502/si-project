@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Poppins';
+  font-style: regular;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Poppins'), url(/fonts/Poppins.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: medium;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Montserrat'), url(/fonts/Montserrat.woff2) format('woff2');
+}

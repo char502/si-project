@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 const Category = ({ newsItems, category }) => {
   const router = useRouter();
 
-  console.log('router: ', router.query);
+  // console.log('router: ', router.query);
   // const { slug, ...rest } = router.query
 
   return (
@@ -20,24 +20,17 @@ const Category = ({ newsItems, category }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
-  // console.log(params.slug);
-
   const category = params.slug;
 
-  // console.log(category);
-
   const newsItems = await fetch(
-    `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=e536074ef7c645008d563c828c8d4354`
+    `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${process.env.react_app_api_key}`
   ).then(response => response.json());
-
-  console.log(newsItems);
 
   if (!category) {
     return {
       notFound: true,
     };
   }
-  // const category = categories.find(x => x.slug === slug);
 
   return {
     props: {
@@ -46,57 +39,5 @@ export const getServerSideProps = async ({ params }) => {
     },
   };
 };
-
-// export const getStaticPaths = async () => {
-//   const categories = (await import('../../src/newsSources')).default;
-
-//   // console.log(categories)
-
-//   const slugs = categories.map(cats => cats.slug);
-
-//   // console.log(slugs)
-
-//   const paths = slugs.map(slug => ({ params: { slug } }));
-
-//   // console.log(paths)
-
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// };
-
-// export const getStaticProps = async ({ params }) => {
-
-//   console.log(params.slug)
-
-//   const category = params.slug
-
-//   const newsItems = await fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=e536074ef7c645008d563c828c8d4354`).then(r => r.json())
-
-//   console.log(newsItems)
-
-//   // const category = categories.find(x => x.slug === slug);
-
-//   return {
-//     props: {
-//       newsItems
-//     },
-//   };
-// };
-
-// export const getServerSideProps = async ({ params, res }) => {
-//   const { category } = params;
-
-//   const result = await fetch(
-//     `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=e536074ef7c645008d563c828c8d4354`
-//   );
-
-//   const data = await result.json();
-
-//   return {
-//     props: { data },
-//   };
-// };
 
 export default Category;
