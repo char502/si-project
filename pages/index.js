@@ -18,7 +18,7 @@ const IndexPage = ({ breakingNewsResult, allNewsSourcesResult }) => {
 export const getServerSideProps = async ({ params, res }) => {
   try {
     const breakingNewsResult = await fetch(
-      `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.react_app_api_key}`
+      `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.NEXT_PUBLIC_react_app_api_key}`
     ).then(response => response.json());
 
     // console.log(breakingNewsResult);
