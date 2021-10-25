@@ -15,80 +15,133 @@ const NewsCardContainer = styled.div`
 
 const NewsImageDiv = styled.div`
   background-color: seashell;
-  width: 100%;
+  /* width: 100%; */
+  width: 260px;
   @media (max-width: 650px) {
     background-color: seashell;
     width: 100%;
-    height: 146px;
+    height: auto;
   }
 `;
 
 const NewsImage = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 260px;
+  height: 146px;
+  /* height: auto; */
   object-fit: cover;
+  @media (max-width: 650px) {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 `;
 
 const NewsMetaDiv = styled.div`
-  background-color: steelblue;
-  width: 100%;
+  /* background-color: steelblue; */
+  width: 246px;
+  height: auto;
+  padding: 10px;
   @media (max-width: 650px) {
-    background-color: steelblue;
-    width: 100%;
+    /* background-color: steelblue; */
+    /* width: 100%; */
     /* width: 260px; */
-    height: 146px;
+    height: auto;
   }
 `;
 
 const RedCategory = styled.div`
-  /* background-color: lightpink; */
   color: red;
-  font-weight: 700;
-  margin: 15px 0;
+  font-size: 11px;
+  margin: 8px 0;
+
+  @media (max-width: 650px) {
+    font-weight: 700;
+    margin: 15px 0;
+  }
 `;
 
 const Headline = styled.div`
   /* background-color: lightslategray; */
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
-  margin: 15px 0;
+  margin: 8px 0;
+
+  overflow: hidden;
+  /* white-space: nowrap; */
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+
+  @media (max-width: 650px) {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 15px 0;
+  }
 `;
 
 const MainDescription = styled.div`
   /* background-color: lightyellow; */
   font-size: 15px;
   font-weight: 400;
-  color: darkgray;
-  margin: 15px 0;
+  color: #565656;
+  margin: 8px 0;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  /* display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical; */
+
+  @media (max-width: 650px) {
+    margin: 15px 0;
+
+    overflow: none;
+    white-space: none;
+    text-overflow: none;
+  }
 `;
 
 const WhenPublished = styled.div`
   /* background-color: lightsteelblue; */
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 300;
-  color: lightgrey;
-  padding-bottom: 5px;
-  margin: 15px 0;
+  color: #7c7c7c;
+  margin: 8px 0;
+  @media (max-width: 650px) {
+    font-size: 12px;
+    padding-bottom: 5px;
+    margin: 15px 0;
+  }
 `;
 
 const StyledHr = styled.hr`
-  color: #e7e7e7;
+  display: none;
+  @media (max-width: 650px) {
+    color: #e7e7e7;
+    /* margin: 10px 0; */
+  }
 `;
 
 const NewsCard = ({ urlToImage, title, description, publishedAt }) => {
   //   const [newsSources, setNewsSources] = useState([]);
 
   return (
-    <NewsCardContainer>
-      <NewsMetaDiv>
-        {/* <RedCategory>Red Description</RedCategory>
-      <Headline>{title}</Headline>
-      <MainDescription>{description}</MainDescription>{' '}
-      <WhenPublished>{publishedAt}</WhenPublished> */}
-      </NewsMetaDiv>
-      <NewsImageDiv>{/* <NewsImage src={urlToImage} /> */}</NewsImageDiv>
+    <>
+      <NewsCardContainer>
+        <NewsImageDiv>
+          <NewsImage src={urlToImage} />
+        </NewsImageDiv>
+        <NewsMetaDiv>
+          <RedCategory>Red Description</RedCategory>
+          <Headline>{title}</Headline>
+          <MainDescription>{description}</MainDescription>{' '}
+          <WhenPublished>{publishedAt}</WhenPublished>
+        </NewsMetaDiv>
+      </NewsCardContainer>
       <StyledHr />
-    </NewsCardContainer>
+    </>
   );
 };
 
