@@ -16,6 +16,10 @@ const LatestNewsTitle = styled.h2`
   /* margin: 0; */
 `;
 
+const StyledHr = styled.hr`
+  color: #e7e7e7;
+`;
+
 const Category = ({ newsItems, category }) => {
   const router = useRouter();
 
@@ -35,9 +39,9 @@ const Category = ({ newsItems, category }) => {
           publishedAt={`${fromNow(newsItems.articles[0].publishedAt)} ago`}
         />
 
-        <hr />
+        <StyledHr />
 
-        <h5>Other News delete when styling finished</h5>
+        <h5>Other News - delete when styling finished</h5>
         {newsItems.articles.map((news, i) => {
           {
             /* return <li key={news.url}>{news.title}</li>; */

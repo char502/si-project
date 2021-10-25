@@ -13,19 +13,13 @@ import Layout from '../src/components/Layout';
 import BreakingNewsCard from '../src/components/BreakingNewsCard';
 import NewsCard from '../src/components/NewsCard';
 
-// const NavHeader = styled.div`
-//   background-color: lightcyan;
-// `;
-
-// const TopNavMain = styled.div`
-//   display: flex;
-//   /* justify-content: cen; */
-//   align-items: center;
-// `;
-
 const Container = styled.div`
   max-width: 560px;
   margin: 0 auto;
+`;
+
+const StyledHr = styled.hr`
+  color: #e7e7e7;
 `;
 
 const FrontPage = ({ breakingNewsResult }) => {
@@ -42,16 +36,10 @@ const FrontPage = ({ breakingNewsResult }) => {
 
   return (
     <Layout>
-      {/* <NavBar /> */}
       <Container>
-        {/* <hr /> */}
         <div>
-          {/* <h1>Breaking News</h1> */}
+          <h3>Breaking News</h3>
 
-          {/* <p>{breakingNewsResult.articles[0].title}</p>
-        <p>{breakingNewsResult.articles[0].description}</p>
-        <p>{breakingNewsResult.articles[0].urlToImage}</p>
-        <p>{`${fromNow(breakingNewsResult.articles[0].publishedAt)} ago`}</p> */}
           <BreakingNewsCard
             urlToImage={breakingNewsResult.articles[0].urlToImage}
             title={breakingNewsResult.articles[0].title}
@@ -61,8 +49,7 @@ const FrontPage = ({ breakingNewsResult }) => {
             )} ago`}
           />
         </div>
-        {/* <img src="" alt="" /> */}
-        <hr />
+        <StyledHr />
         <div style={{ maxWidth: '560px' }}>
           <h5>Other Articles</h5>
           {breakingNewsResult.articles.map((item, i) => {

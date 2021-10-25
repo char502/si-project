@@ -19,19 +19,32 @@ const NewsImage = styled.img`
 `;
 
 const RedDescription = styled.div`
-  background-color: lightgreen;
+  /* background-color: lightpink; */
+  color: red;
+  font-weight: 700;
+  margin: 15px 0;
 `;
 
-const MainTitle = styled.div`
-  background-color: lightslategray;
+const MainHeadline = styled.div`
+  /* background-color: lightslategray; */
+  font-size: 24px;
+  font-weight: 700;
+  margin: 15px 0;
 `;
 
 const MainDescription = styled.div`
-  background-color: lightyellow;
+  font-size: 15px;
+  font-weight: 400;
+  color: darkgray;
+  margin: 15px 0;
 `;
 
 const WhenPublished = styled.div`
-  background-color: lightsteelblue;
+  /* background-color: lightsteelblue; */
+  font-size: 12px;
+  font-weight: 300;
+  color: lightgrey;
+  margin: 15px 0;
 `;
 
 const BreakingNewsCard = ({ urlToImage, title, description, publishedAt }) => {
@@ -41,7 +54,7 @@ const BreakingNewsCard = ({ urlToImage, title, description, publishedAt }) => {
     <BreakingNewsCardContainer>
       <NewsImage src={urlToImage} />
       <RedDescription>Red Description</RedDescription>
-      <MainTitle>{title}</MainTitle>
+      <MainHeadline>{title}</MainHeadline>
       <MainDescription>{description}</MainDescription>{' '}
       {/* Not included in smaller cards */}
       <WhenPublished>{publishedAt}</WhenPublished>
