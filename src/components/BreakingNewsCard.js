@@ -39,7 +39,6 @@ const BreakingNewsCard = ({ urlToImage, title, description, publishedAt }) => {
 
   return (
     <BreakingNewsCardContainer>
-      <Title>Breaking News</Title>
       <NewsImage src={urlToImage} />
       <RedDescription>Red Description</RedDescription>
       <MainTitle>{title}</MainTitle>
