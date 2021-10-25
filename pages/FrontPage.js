@@ -19,7 +19,7 @@ const Container = styled.div`
 `;
 
 const StyledHr = styled.hr`
-  color: #e7e7e7;
+  border-top: 1px solid #e7e7e7;
 `;
 
 const FrontPage = ({ breakingNewsResult }) => {

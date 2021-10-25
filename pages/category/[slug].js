@@ -10,14 +10,16 @@ import NewsCard from '../../src/components/NewsCard';
 const Container = styled.div`
   max-width: 560px;
   margin: 0 auto;
+  padding: 0 15px;
 `;
 
 const LatestNewsTitle = styled.h2`
+  /* font-family: poppins; */
   /* margin: 0; */
 `;
 
 const StyledHr = styled.hr`
-  color: #e7e7e7;
+  border-top: 1px solid #e7e7e7;
 `;
 
 const Category = ({ newsItems, category }) => {
@@ -41,7 +43,6 @@ const Category = ({ newsItems, category }) => {
 
         <StyledHr />
 
-        <h5>Other News - delete when styling finished</h5>
         {newsItems.articles.map((news, i) => {
           {
             /* return <li key={news.url}>{news.title}</li>; */

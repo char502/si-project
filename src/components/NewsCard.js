@@ -3,10 +3,17 @@ import styled from 'styled-components';
 
 const NewsCardContainer = styled.div`
   display: flex;
-
   /* max-width: 560px; */
   margin: 30px auto;
   /* background-color: pink; */
+
+  /* > *:nth-child(even) {
+    flex-direction: row;
+  } */
+  :nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
   @media (max-width: 650px) {
     display: flex;
     flex-direction: column;
@@ -14,9 +21,9 @@ const NewsCardContainer = styled.div`
 `;
 
 const NewsImageDiv = styled.div`
-  background-color: seashell;
-  /* width: 100%; */
+  /* background-color: seashell; */
   width: 260px;
+
   @media (max-width: 650px) {
     background-color: seashell;
     width: 100%;
@@ -27,11 +34,11 @@ const NewsImageDiv = styled.div`
 const NewsImage = styled.img`
   width: 260px;
   height: 146px;
-  /* height: auto; */
   object-fit: cover;
+
   @media (max-width: 650px) {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
   }
 `;
@@ -40,19 +47,21 @@ const NewsMetaDiv = styled.div`
   /* background-color: steelblue; */
   width: 246px;
   height: auto;
-  padding: 10px;
+  padding: 0 0 0 15px;
+
   @media (max-width: 650px) {
     /* background-color: steelblue; */
-    /* width: 100%; */
-    /* width: 260px; */
+    padding: 0;
+    width: 100%;
     height: auto;
   }
 `;
 
 const RedCategory = styled.div`
-  color: red;
+  color: #f02f23;
   font-size: 11px;
   margin: 8px 0;
+  font-weight: 700;
 
   @media (max-width: 650px) {
     font-weight: 700;
@@ -62,44 +71,43 @@ const RedCategory = styled.div`
 
 const Headline = styled.div`
   /* background-color: lightslategray; */
+  color: #2a2a2a;
   font-size: 18px;
   font-weight: 700;
   margin: 8px 0;
-
   overflow: hidden;
   /* white-space: nowrap; */
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  line-height: 22px;
 
   @media (max-width: 650px) {
     font-size: 24px;
     font-weight: 700;
     margin: 15px 0;
+    line-height: 30px;
   }
 `;
 
 const MainDescription = styled.div`
-  /* background-color: lightyellow; */
-  font-size: 15px;
-  font-weight: 400;
-  color: #565656;
-  margin: 8px 0;
-
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  /* display: -webkit-box;
-    -webkit-line-clamp: 2; 
-    -webkit-box-orient: vertical; */
+  display: none;
 
   @media (max-width: 650px) {
     margin: 15px 0;
 
-    overflow: none;
-    white-space: none;
-    text-overflow: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: #565656;
+    margin: 8px 0;
+
+    overflow: hidden;
+    /* white-space: nowrap; */
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 `;
 
@@ -108,20 +116,17 @@ const WhenPublished = styled.div`
   font-size: 11px;
   font-weight: 300;
   color: #7c7c7c;
-  margin: 8px 0;
+  margin: 8px 0 0 0;
+
   @media (max-width: 650px) {
     font-size: 12px;
     padding-bottom: 5px;
-    margin: 15px 0;
+    margin: 15px 0 0 0;
   }
 `;
 
 const StyledHr = styled.hr`
-  display: none;
-  @media (max-width: 650px) {
-    color: #e7e7e7;
-    /* margin: 10px 0; */
-  }
+  border-top: 1px solid #e7e7e7;
 `;
 
 const NewsCard = ({ urlToImage, title, description, publishedAt }) => {
@@ -134,7 +139,7 @@ const NewsCard = ({ urlToImage, title, description, publishedAt }) => {
           <NewsImage src={urlToImage} />
         </NewsImageDiv>
         <NewsMetaDiv>
-          <RedCategory>Red Description</RedCategory>
+          <RedCategory>Category</RedCategory>
           <Headline>{title}</Headline>
           <MainDescription>{description}</MainDescription>{' '}
           <WhenPublished>{publishedAt}</WhenPublished>

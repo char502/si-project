@@ -20,13 +20,14 @@ const NewsImage = styled.img`
 
 const RedDescription = styled.div`
   /* background-color: lightpink; */
-  color: red;
+  color: #f02f23;
   font-weight: 700;
   margin: 15px 0;
 `;
 
 const MainHeadline = styled.div`
   /* background-color: lightslategray; */
+  color: #2a2a2a;
   font-size: 24px;
   font-weight: 700;
   margin: 15px 0;
@@ -43,7 +44,7 @@ const WhenPublished = styled.div`
   /* background-color: lightsteelblue; */
   font-size: 12px;
   font-weight: 300;
-  color: lightgrey;
+  color: #7c7c7c;
   margin: 15px 0;
 `;
 

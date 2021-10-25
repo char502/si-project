@@ -1,15 +1,26 @@
 @font-face {
   font-family: 'Poppins';
-  font-style: regular;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Poppins'), url(/fonts/Poppins.woff2) format('woff2');
+  src: url('Poppins-Regular.ttf') format('truetype'),
+    url('Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
 }
 
 @font-face {
   font-family: 'Montserrat';
-  font-style: medium;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Montserrat'), url(/fonts/Montserrat.woff2) format('woff2');
+  src: url('Montserrat-Medium.ttf') format('truetype'),
+    url('Montserrat-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
 }
+
+/* @font-face {
+  font-family: 'Gloria Hallelujah';
+  src: url('GloriaHallelujah-Regular.ttf') format('truetype'),
+    url('GloriaHallelujah-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+} */

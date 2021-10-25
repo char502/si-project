@@ -19,6 +19,10 @@ const Container = styled.div`
   margin: 0 auto;
 `;
 
+const StyledHr = styled.hr`
+  border-top: 1px solid #e7e7e7;
+`;
+
 const NavBar = props => {
   //   const [newsSources, setNewsSources] = useState([]);
 
@@ -27,12 +31,12 @@ const NavBar = props => {
       <TopNavMain>
         <TopMainNav />
       </TopNavMain>
-      <hr />
+      <StyledHr />
       <Container>
         <div>
           <CategoryLinksNav />
         </div>
-        <hr />
+        <StyledHr />
       </Container>
     </NavHeader>
   );

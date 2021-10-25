@@ -8,7 +8,7 @@ const StyledLi = styled.li`
   padding: 0 7px;
   font-size: 14px;
   font-family: Montserrat;
-  font-weight: 400;
+  font-weight: 500;
   &:first-child {
     padding-left: 0;
   }
