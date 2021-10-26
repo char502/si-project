@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
+import { Router, useRouter } from 'next/router';
 
 import categories from '../../src/newsSources';
 
@@ -12,6 +13,9 @@ const ContainerDiv = styled.div`
 
 const StyledUl = styled.ul`
   /* width: 100%; */
+  list-style: none;
+  display: flex;
+  padding: 0;
 `;
 
 const StyledLi = styled.li`
@@ -26,9 +30,15 @@ const StyledLi = styled.li`
   }
 `;
 
+// export const LinkText = styled.a`
+//   color: ${props => (props.href === props.pathName ? 'green' : '#2A2A2A')};
+// `;
+
 const CategoryLinkNav = props => {
+  const router = useRouter();
   //   const [newsSources, setNewsSources] = useState([]);
   // test
+  console.log(router);
 
   return (
     <ContainerDiv>

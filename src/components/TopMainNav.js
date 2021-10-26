@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { ReactElement } from 'react';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 import MagGlass from '../components/graphics/MagGlass';
+
+// fas fa-bars
 
 const ContainerDiv = styled.div`
   width: 100%;
@@ -14,12 +19,18 @@ const NavItemsDiv = styled.div`
   align-items: center;
   margin: 10px 0 5px 0;
   /* margin: 10px 0 10px 100px; */
+  @media (max-width: 700px) {
+    justify-content: space-between;
+  }
 `;
 
 const MobileHamburger = styled.div`
   /* display: none; */
+  color: white;
   @media (max-width: 700px) {
-    display: none;
+    /* display: none; */
+    color: black;
+    padding: 0 15px;
   }
 `;
 
@@ -45,9 +56,14 @@ const TitleStyleSpan = styled.span`
   } */
 `;
 
+// const SubNavWithMag = styled.div`
+//   display: flex;
+// `;
+
 const SubNavItems = styled.div`
+  /* display: flex; */
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   @media (max-width: 700px) {
     display: none;
   }
@@ -101,21 +117,25 @@ const TopMainNav = props => {
   return (
     <ContainerDiv>
       <NavItemsDiv>
-        <MobileHamburger>Mobile Hamburger</MobileHamburger>
+        <MobileHamburger>
+          <FontAwesomeIcon icon={faBars} />
+        </MobileHamburger>
         <AppHeading>
           <RedLineStyle>__ </RedLineStyle>
           <TitleStyleSpan>Anderson Post</TitleStyleSpan>
         </AppHeading>
+        {/* <SubNavWithMag> */}
         <SubNavItems>
           <NewsletterDiv>Newsletter</NewsletterDiv>
           <SignIn>Sign In</SignIn>
           <Subscribe>Subscribe</Subscribe>
-          <MagnifyingGlass>
-            <MagGlassImageDiv>
-              <MagGlass />
-            </MagGlassImageDiv>
-          </MagnifyingGlass>
         </SubNavItems>
+        <MagnifyingGlass>
+          <MagGlassImageDiv>
+            <MagGlass />
+          </MagGlassImageDiv>
+        </MagnifyingGlass>
+        {/* </SubNavWithMag> */}
       </NavItemsDiv>
     </ContainerDiv>
   );

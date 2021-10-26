@@ -25,6 +25,8 @@ const Container = styled.div`
     ::-webkit-scrollbar {
       width: 0;
     }
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
   }
 `;
 

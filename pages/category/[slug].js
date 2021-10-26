@@ -69,7 +69,7 @@ export const getServerSideProps = async ({ params }) => {
   const category = params.slug;
 
   const newsItems = await fetch(
-    `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${process.env.NEXT_PUBLIC_REACT_APP_API_KEY}`
+    `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${process.env.NEXT_PUBLIC_REACT_APP_API_KEY_FOR_PROJ}`
   ).then(response => response.json());
 
   if (!category) {
