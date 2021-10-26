@@ -19,11 +19,10 @@ const Container = styled.div`
   background-color: lightcyan;
   max-width: 560px;
   margin: 0 auto;
-  /* @media (max-width: 700px) {
-    max-width: 260px;
-    margin: 0 auto;
-    margin-right: 50px;
-  } */
+
+  @media (max-width: 700px) {
+    overflow: scroll;
+  }
 `;
 
 const StyledHr = styled.hr`
