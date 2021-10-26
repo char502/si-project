@@ -24,10 +24,11 @@ const MobileHamburger = styled.div`
 `;
 
 const AppHeading = styled.div`
-  padding-left: 100px;
+  /* padding-left: 270px; */
+  margin: 0 270px;
   white-space: nowrap;
   @media (max-width: 700px) {
-    padding-left: 20px;
+    padding-left: 100px;
   }
 `;
 

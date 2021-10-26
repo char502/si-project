@@ -16,12 +16,15 @@ const TopNavMain = styled.div`
 `;
 
 const Container = styled.div`
-  background-color: lightcyan;
+  /* background-color: lightcyan; */
   max-width: 560px;
   margin: 0 auto;
 
   @media (max-width: 700px) {
-    overflow: scroll;
+    overflow: auto;
+    ::-webkit-scrollbar {
+      width: 0;
+    }
   }
 `;
 
