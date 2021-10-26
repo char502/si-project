@@ -4,6 +4,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 import MagGlass from '../components/graphics/MagGlass';
+import Link from 'next/link';
 
 // fas fa-bars
 
@@ -121,8 +122,12 @@ const TopMainNav = props => {
           <FontAwesomeIcon icon={faBars} />
         </MobileHamburger>
         <AppHeading>
-          <RedLineStyle>__ </RedLineStyle>
-          <TitleStyleSpan>Anderson Post</TitleStyleSpan>
+          <Link href='/'>
+            <a>
+              <RedLineStyle>__ </RedLineStyle>
+              <TitleStyleSpan>Anderson Post</TitleStyleSpan>
+            </a>
+          </Link>
         </AppHeading>
         {/* <SubNavWithMag> */}
         <SubNavItems>
@@ -142,17 +147,3 @@ const TopMainNav = props => {
 };
 
 export default TopMainNav;
-
-{
-  /* <ul style={{ listStyle: 'none', display: 'flex' }}>
-        {['Anderson Post', 'Newsletter', 'Sign In', 'Subscribe'].map(
-          (navItem, i) => {
-            return (
-              <li key={i} style={{ margin: '0 5px' }}>
-                {navItem}
-              </li>
-            );
-          }
-        )}
-      </ul> */
-}

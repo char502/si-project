@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
-import { Router, useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 
 import categories from '../../src/newsSources';
 
@@ -30,25 +30,31 @@ const StyledLi = styled.li`
   }
 `;
 
-// export const LinkText = styled.a`
-//   color: ${props => (props.href === props.pathName ? 'green' : '#2A2A2A')};
-// `;
+export const LinkText = styled.a`
+  color: ${props => (props.href === props.pathName ? 'red' : '#2A2A2A')};
+  text-decoration: ${props =>
+    props.href === props.pathName ? 'underline' : 'none'};
+`;
 
 const CategoryLinkNav = props => {
   const router = useRouter();
   //   const [newsSources, setNewsSources] = useState([]);
   // test
-  console.log(router);
+  console.log(router.asPath);
 
   return (
     <ContainerDiv>
-      <StyledUl style={{ listStyle: 'none', display: 'flex', padding: '0' }}>
+      <StyledUl>
         {categories.map(category => {
-          // return <li key={category.id} style={{margin: '0 5px' }}>{category.name}</li>;
           return (
             <StyledLi key={category.id}>
-              <Link href={`/category/${category.slug}`}>
-                <a>{category.name}</a>
+              {/* <Link href={`/category/${category.slug}`}>
+                <a className='text-red-400 active:text-red-800'>
+                  {category.name}
+                </a>
+              </Link> */}
+              <Link href={`/category/${category.slug}`} passHref>
+                <LinkText pathName={router.asPath}>{category.name}</LinkText>
               </Link>
             </StyledLi>
           );
