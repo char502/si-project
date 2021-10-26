@@ -38,18 +38,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
-          {/* <link
-            rel='preload'
-            href='/fonts/Montserrat-Medium.ttf'
-            as='font'
-            crossOrigin=''
-          />
-          <link
-            rel='preload'
-            href='/fonts/Poppins-Regular.ttf'
-            as='font'
-            crossOrigin=''
-          /> */}
           <link
             href='https://fonts.googleapis.com/css2?family=Poppins&family=Montserrat:wght@500&display=swap'
             rel='stylesheet'

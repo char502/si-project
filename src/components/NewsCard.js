@@ -9,9 +9,9 @@ const NewsCardContainer = styled.div`
   margin: 30px auto;
   /* background-color: pink; */
 
-  > *:nth-child(odd) {
+  /* > *:nth-child(odd) {
     flex-direction: row-reverse;
-  }
+  } */
 
   /* > *:nth-child(even) {
     flex-direction: row;

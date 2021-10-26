@@ -6,7 +6,8 @@ import CategoryLinksNav from '../components/CategoryLinkNav';
 import styled from 'styled-components';
 
 const NavHeader = styled.div`
-  background-color: lightcyan;
+  /* background-color: lightcyan; */
+  /* max-width: 100%; */
 `;
 
 const TopNavMain = styled.div`
@@ -15,11 +16,22 @@ const TopNavMain = styled.div`
 `;
 
 const Container = styled.div`
+  background-color: lightcyan;
   max-width: 560px;
   margin: 0 auto;
+  /* @media (max-width: 700px) {
+    max-width: 260px;
+    margin: 0 auto;
+    margin-right: 50px;
+  } */
 `;
 
 const StyledHr = styled.hr`
+  border-top: 1px solid #e7e7e7;
+`;
+
+const StyledHrPadding = styled.hr`
+  margin: 0 0 0 15px;
   border-top: 1px solid #e7e7e7;
 `;
 
@@ -33,10 +45,10 @@ const NavBar = props => {
       </TopNavMain>
       <StyledHr />
       <Container>
-        <div>
+        <Container>
           <CategoryLinksNav />
-        </div>
-        <StyledHr />
+        </Container>
+        <StyledHrPadding />
       </Container>
     </NavHeader>
   );

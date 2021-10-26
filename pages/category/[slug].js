@@ -44,9 +44,6 @@ const Category = ({ newsItems, category }) => {
         <StyledHr />
 
         {newsItems.articles.map((news, i) => {
-          {
-            /* return <li key={news.url}>{news.title}</li>; */
-          }
           if (i !== 0) {
             return (
               <NewsCard

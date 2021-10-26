@@ -4,13 +4,25 @@ import styled from 'styled-components';
 
 import categories from '../../src/newsSources';
 
+const ContainerDiv = styled.div`
+  /* max-width: 100%; */
+  /* max-width: 560px; */
+  width: 100%;
+`;
+
+const StyledUl = styled.ul`
+  /* width: 100%; */
+`;
+
 const StyledLi = styled.li`
+  /* background-color: lightcyan; */
+  /* max-width: 100%; */
   padding: 0 7px;
   font-size: 14px;
   font-family: Montserrat;
-  font-weight: 500;
+  font-weight: 600;
   &:first-child {
-    padding-left: 0;
+    padding-left: 15px;
   }
 `;
 
@@ -19,8 +31,8 @@ const CategoryLinkNav = props => {
   // test
 
   return (
-    <div>
-      <ul style={{ listStyle: 'none', display: 'flex', padding: '0' }}>
+    <ContainerDiv>
+      <StyledUl style={{ listStyle: 'none', display: 'flex', padding: '0' }}>
         {categories.map(category => {
           // return <li key={category.id} style={{margin: '0 5px' }}>{category.name}</li>;
           return (
@@ -31,8 +43,8 @@ const CategoryLinkNav = props => {
             </StyledLi>
           );
         })}
-      </ul>
-    </div>
+      </StyledUl>
+    </ContainerDiv>
   );
 };
 
