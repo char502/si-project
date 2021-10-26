@@ -20,6 +20,7 @@ const NewsImage = styled.img`
 
 const RedDescription = styled.div`
   /* background-color: lightpink; */
+  font-family: Poppins;
   color: #f02f23;
   font-weight: 700;
   margin: 15px 0;
@@ -27,6 +28,7 @@ const RedDescription = styled.div`
 
 const MainHeadline = styled.div`
   /* background-color: lightslategray; */
+  font-family: Poppins;
   color: #2a2a2a;
   font-size: 24px;
   font-weight: 700;
@@ -34,6 +36,7 @@ const MainHeadline = styled.div`
 `;
 
 const MainDescription = styled.div`
+  font-family: Poppins;
   font-size: 15px;
   font-weight: 400;
   color: darkgray;
@@ -42,6 +45,7 @@ const MainDescription = styled.div`
 
 const WhenPublished = styled.div`
   /* background-color: lightsteelblue; */
+  font-family: Poppins;
   font-size: 12px;
   font-weight: 300;
   color: #7c7c7c;

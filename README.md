@@ -1,34 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Storm Ideas Test
 
-## Getting Started
+The App can be viewed here: https://si-project.vercel.app/
 
-First, run the development server:
+TO complete thsi app I have used:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- Next.js
+- JavaScript (I was planning to use TypeScript but I ran out of time)
+- Styled Components
+- Flexbox for responsiveness
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Anderson Post News App
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- The front page shows headlines and breaking news
+- Clicking on any link in the second navbar (showing the categories 'Business', Entertainment etc will take you to the page with all the news for that category)
+- Re-Sizing the app will display in 'compact' mode (I have only use 1 breakpoint (650px) in order to demonstrate responsiveness/complete this in the available time)
+- I have applied Google fonts as per the figma for nicer text
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- I have deployed the app on Vercel (as per the above link)
+- I have used getServersideProps to call https://newsapi.org/ as otherwise the app will only work in developer mode (i.e. the api calls won't work on deploy, they will only work on the local machine). By calling the api's from the server the calls will work on deploy.
+- I have used ellipsis where the text is too long to help with a tidier layout
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Things I will aim to do If i get time
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Fix layout on the nav bars and make them responsive
+- Alternate cards down the column (nth child?)
+- Pagination
+- Redirect to 404 if no category match
+- Loading spinner
+- Add a placeholder for when there is no image available
+- Integrate category (red text) into the cards)
+- convert to TypeScript

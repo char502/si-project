@@ -6,9 +6,6 @@ import ErrorPage from 'next/error';
 import { DateTime } from 'luxon';
 import fromNow from 'from-now';
 
-// import TopMainNav from '../src/components/TopMainNav';
-// import CategoryLinksNav from '../src/components/CategoryLinkNav';
-// import NavBar from '../src/components/Navbar';
 import Layout from '../src/components/Layout';
 import BreakingNewsCard from '../src/components/BreakingNewsCard';
 import NewsCard from '../src/components/NewsCard';
@@ -16,6 +13,12 @@ import NewsCard from '../src/components/NewsCard';
 const Container = styled.div`
   max-width: 560px;
   margin: 0 auto;
+  padding: 0 15px;
+`;
+
+const FrontPageTitle = styled.h3`
+  font-family: Poppins;
+  font-weight: 700;
 `;
 
 const StyledHr = styled.hr`
@@ -38,7 +41,7 @@ const FrontPage = ({ breakingNewsResult }) => {
     <Layout>
       <Container>
         <div>
-          <h3>Breaking News</h3>
+          <FrontPageTitle>Breaking News</FrontPageTitle>
 
           <BreakingNewsCard
             urlToImage={breakingNewsResult.articles[0].urlToImage}
@@ -50,8 +53,7 @@ const FrontPage = ({ breakingNewsResult }) => {
           />
         </div>
         <StyledHr />
-        <div style={{ maxWidth: '560px' }}>
-          <h5>Other Articles</h5>
+        <div>
           {breakingNewsResult.articles.map((item, i) => {
             if (i !== 0) {
               return (

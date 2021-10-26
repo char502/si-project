@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import Image from 'next/image';
+import imagePlaceholder from '../../public/Images/imagePlaceholder.png';
 
 const NewsCardContainer = styled.div`
   display: flex;
@@ -7,12 +9,16 @@ const NewsCardContainer = styled.div`
   margin: 30px auto;
   /* background-color: pink; */
 
-  /* > *:nth-child(even) {
-    flex-direction: row;
-  } */
-  :nth-child(odd) {
+  > *:nth-child(odd) {
     flex-direction: row-reverse;
   }
+
+  /* > *:nth-child(even) {
+    flex-direction: row;
+  }
+  > *:nth-child(odd) {
+    flex-direction: row-reverse;
+  } */
 
   @media (max-width: 650px) {
     display: flex;
@@ -58,22 +64,23 @@ const NewsMetaDiv = styled.div`
 `;
 
 const RedCategory = styled.div`
+  font-family: Poppins;
   color: #f02f23;
   font-size: 11px;
   margin: 8px 0;
   font-weight: 700;
 
   @media (max-width: 650px) {
-    font-weight: 700;
     margin: 15px 0;
   }
 `;
 
 const Headline = styled.div`
   /* background-color: lightslategray; */
+  font-family: Poppins;
   color: #2a2a2a;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   margin: 8px 0;
   overflow: hidden;
   /* white-space: nowrap; */
@@ -85,7 +92,7 @@ const Headline = styled.div`
 
   @media (max-width: 650px) {
     font-size: 24px;
-    font-weight: 700;
+    /* font-weight: 700; */
     margin: 15px 0;
     line-height: 30px;
   }
@@ -95,6 +102,7 @@ const MainDescription = styled.div`
   display: none;
 
   @media (max-width: 650px) {
+    font-family: Poppins;
     margin: 15px 0;
 
     font-size: 15px;
@@ -113,6 +121,7 @@ const MainDescription = styled.div`
 
 const WhenPublished = styled.div`
   /* background-color: lightsteelblue; */
+  font-family: Poppins;
   font-size: 11px;
   font-weight: 300;
   color: #7c7c7c;
@@ -137,6 +146,17 @@ const NewsCard = ({ urlToImage, title, description, publishedAt }) => {
       <NewsCardContainer>
         <NewsImageDiv>
           <NewsImage src={urlToImage} />
+          {/* placeholder If no image available */}
+          {/* <Image src={imagePlaceholder} alt='placeholder' /> */}
+          {/* <NewsImage
+            src={
+              urlToImage ? (
+                urlToImage
+              ) : (
+                <Image src={imagePlaceholder} alt='placeholder' />
+              )
+            }
+          /> */}
         </NewsImageDiv>
         <NewsMetaDiv>
           <RedCategory>Category</RedCategory>

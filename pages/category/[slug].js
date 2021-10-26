@@ -14,7 +14,7 @@ const Container = styled.div`
 `;
 
 const LatestNewsTitle = styled.h2`
-  /* font-family: poppins; */
+  font-family: poppins;
   /* margin: 0; */
 `;
 
