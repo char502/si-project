@@ -17,18 +17,17 @@ const NavItemsDiv = styled.div`
 `;
 
 const MobileHamburger = styled.div`
-  color: white;
+  /* display: none; */
   @media (max-width: 700px) {
     display: none;
   }
 `;
 
 const AppHeading = styled.div`
-  /* padding-left: 270px; */
-  margin: 0 270px;
+  padding-left: 100px;
   white-space: nowrap;
   @media (max-width: 700px) {
-    padding-left: 100px;
+    padding-left: 20px;
   }
 `;
 
@@ -111,12 +110,12 @@ const TopMainNav = props => {
           <NewsletterDiv>Newsletter</NewsletterDiv>
           <SignIn>Sign In</SignIn>
           <Subscribe>Subscribe</Subscribe>
+          <MagnifyingGlass>
+            <MagGlassImageDiv>
+              <MagGlass />
+            </MagGlassImageDiv>
+          </MagnifyingGlass>
         </SubNavItems>
-        <MagnifyingGlass>
-          <MagGlassImageDiv>
-            <MagGlass />
-          </MagGlassImageDiv>
-        </MagnifyingGlass>
       </NavItemsDiv>
     </ContainerDiv>
   );
