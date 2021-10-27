@@ -37,7 +37,7 @@ const FrontPage = ({ breakingNewsResult }) => {
           <FrontPageTitle>Breaking News</FrontPageTitle>
 
           <BreakingNewsCard
-            urlToImage={fbreakingNewsResult.articles[0].urlToImage}
+            urlToImage={breakingNewsResult.articles[0].urlToImage}
             title={breakingNewsResult.articles[0].title}
             description={breakingNewsResult.articles[0].description}
             publishedAt={`${fromNow(
