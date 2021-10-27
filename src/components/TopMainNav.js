@@ -93,6 +93,7 @@ const SubNavItems = styled.div`
 const MagGlassImageDiv = styled.div`
   /* background-color: cyan; */
   /* background-color: cyan; */
+  /* background-color: cyan; */
   width: 15px;
   height: 15px;
 `;
