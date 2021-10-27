@@ -134,8 +134,6 @@ const MagnifyingGlass = styled.button`
 `;
 
 const TopMainNav = props => {
-  //   const [newsSources, setNewsSources] = useState([]);
-
   return (
     <ContainerDiv>
       <NavItemsDiv>
