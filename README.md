@@ -14,6 +14,7 @@ Anderson Post News App
 - The front page shows headlines and breaking news
 - Clicking on any link in the second navbar (showing the categories 'Business', Entertainment etc will take you to the page with all the news for that category)
 - When you are on a category page, that page will be highlighted in red and underlined in the category navBar
+- When going to a category page 10 items will be revealed initially then a button will reveal 10 more
 - Re-Sizing the app will display in 'compact' mode (I have only use 1 breakpoint (650px) in order to demonstrate responsiveness/complete this in the available time)
 - The category navBar is scrollable in mobile view
 - I have applied Google fonts as per the figma for nicer text
@@ -27,7 +28,6 @@ Things I will aim to do if I get time
 
 - Fix layout on the top nav bars and make them responsive (this is done in mobile view just need to finish desktop view)
 - Alternate cards down the column (nth child(odd/even) while mapping?)
-- Initially reveal 10 items then a button to reveal 10 more
 - Redirect to 404 if no category match (have tried to fix this but kept getting error messages and didn't have time to dig further)
 - Loading spinner
 - Add a placeholder for when there is no image available (have tried to fix this but kept getting error messages and didn't have time to dig further)

@@ -6,6 +6,7 @@ import styled from 'styled-components';
 const NewsCardContainer = styled.div`
   display: flex;
   margin: 30px auto;
+  text-align: left;
 
   // Trying to figure out alternate layout for news cards
 

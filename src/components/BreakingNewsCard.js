@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const BreakingNewsCardContainer = styled.div``;
+const BreakingNewsCardContainer = styled.div`
+  text-align: left;
+`;
 
 const Title = styled.div`
   margin: 15px 0;
