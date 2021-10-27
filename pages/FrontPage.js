@@ -28,7 +28,7 @@ const FrontPage = ({ breakingNewsResult }) => {
   //   };
   // }
 
-  const firstBreakingNewsItem = breakingNewsResult.articles[0];
+  // const firstBreakingNewsItem = breakingNewsResult.articles[0];
 
   return (
     <Layout>
@@ -37,10 +37,12 @@ const FrontPage = ({ breakingNewsResult }) => {
           <FrontPageTitle>Breaking News</FrontPageTitle>
 
           <BreakingNewsCard
-            urlToImage={firstBreakingNewsItem.urlToImage}
-            title={firstBreakingNewsItem.title}
-            description={firstBreakingNewsItem.description}
-            publishedAt={`${fromNow(firstBreakingNewsItem.publishedAt)} ago`}
+            urlToImage={fbreakingNewsResult.articles[0].urlToImage}
+            title={breakingNewsResult.articles[0].title}
+            description={breakingNewsResult.articles[0].description}
+            publishedAt={`${fromNow(
+              breakingNewsResult.articles[0].publishedAt
+            )} ago`}
           />
         </div>
         <StyledHr />
