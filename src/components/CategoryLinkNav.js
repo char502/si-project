@@ -38,9 +38,6 @@ export const LinkText = styled.a`
 
 const CategoryLinkNav = props => {
   const router = useRouter();
-  //   const [newsSources, setNewsSources] = useState([]);
-  // test
-  console.log(router.asPath);
 
   return (
     <ContainerDiv>

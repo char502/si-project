@@ -25,9 +25,17 @@ const StyledHr = styled.hr`
 const Category = ({ newsItems, category }) => {
   const router = useRouter();
 
-  // console.log('router: ', router.query);
-  // const { slug, ...rest } = router.query
-  // console.log(newsItems);
+  // console.log(router);
+
+  const { slug } = router.query;
+
+  console.log(slug);
+
+  if (!slug) {
+    return {
+      notFound: true,
+    };
+  }
 
   return (
     <Layout>
@@ -67,6 +75,8 @@ const Category = ({ newsItems, category }) => {
 
 export const getServerSideProps = async ({ params }) => {
   const category = params.slug;
+
+  console.log(category);
 
   const newsItems = await fetch(
     `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${process.env.NEXT_PUBLIC_REACT_APP_API_KEY_FOR_PROJ}`

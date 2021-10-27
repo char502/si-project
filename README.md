@@ -17,11 +17,11 @@ Anderson Post News App
 - Re-Sizing the app will display in 'compact' mode (I have only use 1 breakpoint (650px) in order to demonstrate responsiveness/complete this in the available time)
 - the category navBar is scrollable in mobile view
 - I have applied Google fonts as per the figma for nicer text
+- I have used ellipsis where the text is too long to help with a tidier layout
 - I have created a reusable layout component containing the navbar elements which I can wrap round any 'page' where I need to include the nav bar (see it available in both the front page and category pages)
 
 - I have deployed the app on Vercel (as per the above link)
 - I have used getServersideProps to call https://newsapi.org/ as otherwise the app will only work in developer mode (i.e. the api calls won't work on deploy, they will only work on the local machine). By calling the api's from the server the calls will work on deploy.
-- I have used ellipsis where the text is too long to help with a tidier layout
 
 Things I will aim to do if I get time
 

@@ -33,6 +33,7 @@ const MainHeadline = styled.div`
   font-size: 24px;
   font-weight: 700;
   margin: 15px 0;
+  line-height: 30px;
 `;
 
 const MainDescription = styled.div`
