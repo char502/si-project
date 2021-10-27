@@ -30,20 +30,22 @@ const FrontPage = ({ breakingNewsResult }) => {
 
   // const firstBreakingNewsItem = breakingNewsResult.articles[0];
 
+  console.log(breakingNewsResult.articles);
+
   return (
     <Layout>
       <Container>
         <div>
           <FrontPageTitle>Breaking News</FrontPageTitle>
 
-          <BreakingNewsCard
+          {/* <BreakingNewsCard
             urlToImage={breakingNewsResult.articles[0].urlToImage}
             title={breakingNewsResult.articles[0].title}
             description={breakingNewsResult.articles[0].description}
             publishedAt={`${fromNow(
               breakingNewsResult.articles[0].publishedAt
             )} ago`}
-          />
+          /> */}
         </div>
         <StyledHr />
         <div>
