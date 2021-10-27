@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
-import { useRouter } from 'next/router';
-// import ErrorPage from 'next/error';
 import styled from 'styled-components';
 import { DateTime } from 'luxon';
 import fromNow from 'from-now';
@@ -28,20 +25,25 @@ const LoadMoreButton = styled.button`
   background-color: white;
   color: red;
   border: 1px solid red;
-  /* border-color: red; */
   cursor: pointer;
   border-radius: 50px;
   margin: 10px 0 30px 0;
-  /* text-align: center; */
   padding: 3px 25px;
-
-  /* align-items: center; */
-  /* justify-content: center; */
 `;
 
 const Category = ({ newsItems, category }) => {
   const [newsData, setNewsData] = useState([]);
   const [visible, setVisible] = useState(10);
+
+  // const router = useRouter();
+
+  // const { slug } = router.query.slug
+
+  // if (!slug) {
+  //   return {
+  //     notFound: true,
+  //   };
+  // }
 
   useEffect(() => {
     setNewsData(newsItems.articles);
@@ -52,15 +54,6 @@ const Category = ({ newsItems, category }) => {
   const loadMore = () => {
     setVisible(visible + 10);
   };
-  // const router = useRouter();
-
-  // const { slug } = router.query.slug
-
-  // if (!slug) {
-  //   return {
-  //     notFound: true,
-  //   };
-  // }
 
   const categoryForTitle =
     category.slice(0, 1).toUpperCase() + category.slice(1).toLowerCase();

@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
-
 import categories from '../../src/newsSources';
 
 const ContainerDiv = styled.div`

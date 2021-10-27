@@ -1,17 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { ReactElement } from 'react';
+import React from 'react';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 import MagGlass from '../components/graphics/MagGlass';
 import Link from 'next/link';
 
-// fas fa-bars
-
 const ContainerDiv = styled.div`
   width: 100%;
-  /* background-color: lightgoldenrodyellow; */
-  /* margin: 0 auto; */
 `;
 
 const NavItemsDiv = styled.div`
@@ -19,25 +14,20 @@ const NavItemsDiv = styled.div`
   justify-content: space-evenly;
   align-items: center;
   margin: 10px 0 5px 0;
-  /* margin: 10px 0 10px 100px; */
   @media (max-width: 700px) {
     justify-content: space-between;
   }
 `;
 
 const MobileHamburger = styled.div`
-  /* background-color: lightskyblue; */
-  /* display: none; */
   color: white;
   @media (max-width: 700px) {
-    /* display: none; */
     color: black;
     padding: 0 15px;
   }
 `;
 
 const AppHeading = styled.div`
-  /* background-color: lightgrey; */
   margin-left: 400px;
   white-space: nowrap;
   @media (max-width: 700px) {
@@ -55,9 +45,6 @@ const TitleStyleSpan = styled.span`
   font-family: times-new-roman;
   font-size: 25px;
   font-weight: 600;
-  /* @media (max-width: 700px) {
-    display: none;
-  } */
 `;
 
 // const SubNavWithMag = styled.div`
@@ -65,11 +52,9 @@ const TitleStyleSpan = styled.span`
 // `;
 
 const SubNavItems = styled.div`
-  /* background-color: lightseagreen; */
   padding-left: 200px;
   /* display: flex; */
   display: flex;
-  /* justify-content: space-evenly; */
   @media (max-width: 1265px) {
     padding-left: 160px;
   }
@@ -91,8 +76,6 @@ const SubNavItems = styled.div`
 `;
 
 const MagGlassImageDiv = styled.div`
-  /* background-color: cyan; */
-
   width: 15px;
   height: 15px;
 `;
@@ -134,7 +117,7 @@ const MagnifyingGlass = styled.button`
   }
 `;
 
-const TopMainNav = props => {
+const TopMainNav = () => {
   return (
     <ContainerDiv>
       <NavItemsDiv>

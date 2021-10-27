@@ -1,7 +1,6 @@
 import React from 'react';
 import TopMainNav from '../components/TopMainNav';
 import CategoryLinksNav from '../components/CategoryLinkNav';
-
 import styled from 'styled-components';
 
 const NavHeader = styled.div``;
