@@ -47,7 +47,7 @@ const Category = ({ newsItems, category }) => {
 
   useEffect(() => {
     setNewsData(newsItems.articles);
-  });
+  }, []);
 
   console.log(newsData);
 

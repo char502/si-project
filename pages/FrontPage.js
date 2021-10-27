@@ -39,7 +39,7 @@ const FrontPage = ({ breakingNewsResult }) => {
 
   useEffect(() => {
     setBreakingNewsData(breakingNewsResult.articles);
-  });
+  }, []);
 
   if (!breakingNewsResult) {
     return <ErrorPage statusCode={404} />;
