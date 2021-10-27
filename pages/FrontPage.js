@@ -28,9 +28,9 @@ const StyledHr = styled.hr`
 const FrontPage = ({ breakingNewsResult }) => {
   const router = useRouter();
 
-  if (!breakingNewsResult) {
-    return <ErrorPage statusCode={404} />;
-  }
+  // if (!breakingNewsResult) {
+  //   return <ErrorPage statusCode={404} />;
+  // }
 
   return (
     <Layout>
