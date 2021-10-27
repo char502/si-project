@@ -26,6 +26,7 @@ const NavItemsDiv = styled.div`
 `;
 
 const MobileHamburger = styled.div`
+  /* background-color: lightskyblue; */
   /* display: none; */
   color: white;
   @media (max-width: 700px) {
@@ -36,9 +37,11 @@ const MobileHamburger = styled.div`
 `;
 
 const AppHeading = styled.div`
-  padding-left: 100px;
+  /* background-color: lightgrey; */
+  margin-left: 400px;
   white-space: nowrap;
   @media (max-width: 700px) {
+    margin-left: 0;
     padding-left: 20px;
   }
 `;
@@ -62,15 +65,33 @@ const TitleStyleSpan = styled.span`
 // `;
 
 const SubNavItems = styled.div`
+  /* background-color: lightseagreen; */
+  padding-left: 200px;
   /* display: flex; */
   display: flex;
   /* justify-content: space-evenly; */
+  @media (max-width: 1265px) {
+    padding-left: 160px;
+  }
+  @media (max-width: 1235px) {
+    padding-left: 120px;
+  }
+  @media (max-width: 1190px) {
+    padding-left: 60px;
+  }
+  @media (max-width: 1165px) {
+    padding-left: 80px;
+  }
+  @media (max-width: 1033px) {
+    padding-left: 40px;
+  }
   @media (max-width: 700px) {
     display: none;
   }
 `;
 
 const MagGlassImageDiv = styled.div`
+  /* background-color: cyan; */
   width: 15px;
   height: 15px;
 `;

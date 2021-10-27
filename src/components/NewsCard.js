@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
-import imagePlaceholder from '../../public/Images/imagePlaceholder.png';
+// import Image from 'next/image';
+// import imagePlaceholder from '../../public/Images/imagePlaceholder.png';
 
 const NewsCardContainer = styled.div`
   display: flex;
-  /* max-width: 560px; */
   margin: 30px auto;
-  /* background-color: pink; */
 
-  /* > *:nth-child(odd) {
-    flex-direction: row-reverse;
-  } */
+  // Trying to figure out alternate layout for news cards
 
   /* > *:nth-child(even) {
     flex-direction: row;
@@ -27,7 +23,6 @@ const NewsCardContainer = styled.div`
 `;
 
 const NewsImageDiv = styled.div`
-  /* background-color: seashell; */
   width: 260px;
 
   @media (max-width: 650px) {
@@ -50,13 +45,11 @@ const NewsImage = styled.img`
 `;
 
 const NewsMetaDiv = styled.div`
-  /* background-color: steelblue; */
   width: 246px;
   height: auto;
   padding: 0 0 0 15px;
 
   @media (max-width: 650px) {
-    /* background-color: steelblue; */
     padding: 0;
     width: 100%;
     height: auto;
@@ -76,14 +69,12 @@ const RedCategory = styled.div`
 `;
 
 const Headline = styled.div`
-  /* background-color: lightslategray; */
   font-family: Poppins;
   color: #2a2a2a;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   margin: 8px 0;
   overflow: hidden;
-  /* white-space: nowrap; */
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -92,7 +83,6 @@ const Headline = styled.div`
 
   @media (max-width: 650px) {
     font-size: 24px;
-    /* font-weight: 700; */
     margin: 15px 0;
     line-height: 30px;
   }
@@ -104,14 +94,12 @@ const MainDescription = styled.div`
   @media (max-width: 650px) {
     font-family: Poppins;
     margin: 15px 0;
-
     font-size: 15px;
     font-weight: 400;
     color: #565656;
     margin: 8px 0;
 
     overflow: hidden;
-    /* white-space: nowrap; */
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -120,7 +108,6 @@ const MainDescription = styled.div`
 `;
 
 const WhenPublished = styled.div`
-  /* background-color: lightsteelblue; */
   font-family: Poppins;
   font-size: 11px;
   font-weight: 300;
@@ -139,8 +126,6 @@ const StyledHr = styled.hr`
 `;
 
 const NewsCard = ({ urlToImage, title, description, publishedAt }) => {
-  //   const [newsSources, setNewsSources] = useState([]);
-
   return (
     <>
       <NewsCardContainer>

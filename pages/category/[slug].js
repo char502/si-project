@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import styled from 'styled-components';
-// import React from 'react';
 import { DateTime } from 'luxon';
 import fromNow from 'from-now';
 import Layout from '../../src/components/Layout';
@@ -15,7 +14,6 @@ const Container = styled.div`
 
 const LatestNewsTitle = styled.h2`
   font-family: poppins;
-  /* margin: 0; */
 `;
 
 const StyledHr = styled.hr`
@@ -23,30 +21,37 @@ const StyledHr = styled.hr`
 `;
 
 const Category = ({ newsItems, category }) => {
-  const router = useRouter();
+  // const router = useRouter();
 
-  // console.log(router);
+  // const { slug } = router.query.slug
 
-  const { slug } = router.query;
+  // if (!slug) {
+  //   return {
+  //     notFound: true,
+  //   };
+  // }
 
-  console.log(slug);
+  const categoryForTitle =
+    category.slice(0, 1).toUpperCase() + category.slice(1).toLowerCase();
 
-  if (!slug) {
+  if (newsItems.articles.length === 0) {
     return {
       notFound: true,
     };
   }
 
+  const firstCategoryNewsItem = newsItems.articles[0];
+
   return (
     <Layout>
       <Container>
-        <LatestNewsTitle>Latest {category} News</LatestNewsTitle>
+        <LatestNewsTitle>Latest {categoryForTitle} News</LatestNewsTitle>
 
         <BreakingNewsCard
-          urlToImage={newsItems.articles[0].urlToImage}
-          title={newsItems.articles[0].title}
-          description={newsItems.articles[0].description}
-          publishedAt={`${fromNow(newsItems.articles[0].publishedAt)} ago`}
+          urlToImage={firstCategoryNewsItem.urlToImage}
+          title={firstCategoryNewsItem.title}
+          description={firstCategoryNewsItem.description}
+          publishedAt={`${fromNow(firstCategoryNewsItem.publishedAt)} ago`}
         />
 
         <StyledHr />
@@ -75,8 +80,6 @@ const Category = ({ newsItems, category }) => {
 
 export const getServerSideProps = async ({ params }) => {
   const category = params.slug;
-
-  console.log(category);
 
   const newsItems = await fetch(
     `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${process.env.NEXT_PUBLIC_REACT_APP_API_KEY_FOR_PROJ}`

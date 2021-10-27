@@ -15,7 +15,7 @@ Anderson Post News App
 - Clicking on any link in the second navbar (showing the categories 'Business', Entertainment etc will take you to the page with all the news for that category)
 - When you are on a category page, that page will be highlighted in red and underlined in the category navBar
 - Re-Sizing the app will display in 'compact' mode (I have only use 1 breakpoint (650px) in order to demonstrate responsiveness/complete this in the available time)
-- the category navBar is scrollable in mobile view
+- The category navBar is scrollable in mobile view
 - I have applied Google fonts as per the figma for nicer text
 - I have used ellipsis where the text is too long to help with a tidier layout
 - I have created a reusable layout component containing the navbar elements which I can wrap round any 'page' where I need to include the nav bar (see it available in both the front page and category pages)
@@ -27,11 +27,12 @@ Things I will aim to do if I get time
 
 - Fix layout on the top nav bars and make them responsive (this is done in mobile view just need to finish desktop view)
 - Alternate cards down the column (nth child(odd/even) while mapping?)
-- Pagination
-- Redirect to 404 if no category match
+- Initially reveal 10 items then a button to reveal 10 more
+- Redirect to 404 if no category match (have tried to fix this but kept getting error messages and didn't have time to dig further)
 - Loading spinner
-- Add a placeholder for when there is no image available
+- Add a placeholder for when there is no image available (have tried to fix this but kept getting error messages and didn't have time to dig further)
 - Integrate category (red text) into the cards)
-- convert to TypeScript
+- Add nav items to Hamburger shown in mobile
+- Convert to TypeScript
 - I saw re exporting the 'Anderson Post' image but I couldn't figure out how to export the red line and the text together then get them aligning properly with each other
-- I did export/use the magnifying glass image though
+- I did export/use the magnifying glass image and use it in the test as an SVG though

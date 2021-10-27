@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from 'react';
-
+import React from 'react';
 import TopMainNav from '../components/TopMainNav';
 import CategoryLinksNav from '../components/CategoryLinkNav';
 
 import styled from 'styled-components';
 
-const NavHeader = styled.div`
-  /* background-color: lightcyan; */
-  /* max-width: 100%; */
-`;
+const NavHeader = styled.div``;
 
 const TopNavMain = styled.div`
   display: flex;
@@ -16,7 +12,6 @@ const TopNavMain = styled.div`
 `;
 
 const Container = styled.div`
-  /* background-color: lightcyan; */
   max-width: 560px;
   margin: 0 auto;
 
@@ -40,8 +35,6 @@ const StyledHrPadding = styled.hr`
 `;
 
 const NavBar = props => {
-  //   const [newsSources, setNewsSources] = useState([]);
-
   return (
     <NavHeader>
       <TopNavMain>

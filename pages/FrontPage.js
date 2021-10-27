@@ -1,11 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { useRouter } from 'next/router';
-
-import ErrorPage from 'next/error';
 import { DateTime } from 'luxon';
 import fromNow from 'from-now';
-
 import Layout from '../src/components/Layout';
 import BreakingNewsCard from '../src/components/BreakingNewsCard';
 import NewsCard from '../src/components/NewsCard';
@@ -26,16 +22,13 @@ const StyledHr = styled.hr`
 `;
 
 const FrontPage = ({ breakingNewsResult }) => {
-  const router = useRouter();
-
-  if (!breakingNewsResult) {
-    return <ErrorPage statusCode={404} />;
+  if (breakingNewsResult.articles.length === 0) {
+    return {
+      notFound: true,
+    };
   }
 
-  // console.log(allNewsSourcesResult);
-  // console.log(allSourcesResultData);
-
-  // console.log(breakingNewsResult);
+  const firstBreakingNewsItem = breakingNewsResult.articles[0];
 
   return (
     <Layout>
@@ -44,12 +37,10 @@ const FrontPage = ({ breakingNewsResult }) => {
           <FrontPageTitle>Breaking News</FrontPageTitle>
 
           <BreakingNewsCard
-            urlToImage={breakingNewsResult.articles[0].urlToImage}
-            title={breakingNewsResult.articles[0].title}
-            description={breakingNewsResult.articles[0].description}
-            publishedAt={`${fromNow(
-              breakingNewsResult.articles[0].publishedAt
-            )} ago`}
+            urlToImage={firstBreakingNewsItem.urlToImage}
+            title={firstBreakingNewsItem.title}
+            description={firstBreakingNewsItem.description}
+            publishedAt={`${fromNow(firstBreakingNewsItem.publishedAt)} ago`}
           />
         </div>
         <StyledHr />
