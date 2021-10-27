@@ -32,11 +32,6 @@ const FrontPage = ({ breakingNewsResult }) => {
     return <ErrorPage statusCode={404} />;
   }
 
-  // console.log(allNewsSourcesResult);
-  // console.log(allSourcesResultData);
-
-  // console.log(breakingNewsResult);
-
   return (
     <Layout>
       <Container>
