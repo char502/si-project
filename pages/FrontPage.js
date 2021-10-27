@@ -22,11 +22,11 @@ const StyledHr = styled.hr`
 `;
 
 const FrontPage = ({ breakingNewsResult }) => {
-  if (breakingNewsResult.articles.length === 0) {
-    return {
-      notFound: true,
-    };
-  }
+  // if (breakingNewsResult.articles.length === 0) {
+  //   return {
+  //     notFound: true,
+  //   };
+  // }
 
   const firstBreakingNewsItem = breakingNewsResult.articles[0];
 
