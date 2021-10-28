@@ -2,7 +2,10 @@
 
 The App can be viewed here: https://si-project.vercel.app/
 
-To complete thsi app I have used:
+- To run the project locally, just clone from github, npm install and yarn dev to run
+- An api key from newsapi.org will be needed (and added as the value in .env.local) to run the app locally
+
+To complete this app I have used:
 
 - Next.js
 - JavaScript (I was planning to use TypeScript but I ran out of time)
